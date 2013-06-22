@@ -6,10 +6,10 @@ from random import choice
 LIST_OF_VIDEOS = []
 
 def get_embed_code(url):
-	return "<object height=\"390\" width=\"640\"><param name=\"movie\" value=\"" + url + "&autoplay=1&loop=0\" /><embed height=\"390\" src=\"" + url + "&autoplay=1&loop=0\" type=\"application/x-shockwave-flash\" width=\"640\"></embed></object>"
+	return "<p><h2>View today's popular trailers on YouTube</h2></p><object height=\"390\" width=\"640\"><param name=\"movie\" value=\"" + url + "&autoplay=1&loop=0\" /><embed height=\"390\" src=\"" + url + "&autoplay=1&loop=0\" type=\"application/x-shockwave-flash\" width=\"640\"></embed></object>"
 	
 def embed_button():
-	return "<form action=\"/next\"><input type=\"submit\" value=\"Next Random Trailer\"></form>"
+	return "<br><form action=\"/next\"><input type=\"submit\" value=\"Next Random Trailer\"></form><br><br><br><p>Created by <a href=\"http://www.goel.im\">Karan Goel</a>. [<a href=\"https://github.com/thekarangoel/popular-trailers\">Source</a>]</p>"
 
 class MainPage(webapp2.RequestHandler):
 	def get(self):
